@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>joshbrice.com</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Top left corner initials -->
+        <div class="initials">JB</div>
+
+        <!-- Main content grid -->
+        <div class="main-grid">
+            <!-- Left column: Name, title, skills, experience -->
+            <div class="left-column">
+                <div class="header">
+                    <h1 class="name">Josh Brice</h1>
+                    <p class="title">Systems & Software Engineer</p>
+                    <p class="skills">Embedded systems, networking optimizations, security & cpp</p>
+                    <p class="skills">Reformed Python & HuggingFace enjoyer</p>
+                </div>
+
+                <div class="experience">
+                    <div class="experience-section">
+                        <h2 class="section-label">CURRENTLY</h2>
+                        <p class="experience-item">Computer Systems MS @ Northwestern</p>
+                        <p class="experience-subitem">Thesis: supervised by Peter Dinda & Matt Godbolt</p>
+                        <p class="experience-item">Systems Engineer @ Prescience Lab</p>
+                        <p class="experience-subitem">CHERI Group: Finding cool ways to optimise memory protection</p>
+                    </div>
+
+                    <div class="experience-section">
+                        <h2 class="section-label">PREVIOUSLY</h2>
+                        <p class="experience-item">Ardevora Asset Management LLP → built indexing pipeline for financial RAG app</p>
+                        <p class="experience-item">Cisco → automating API calls with AI, with 99%+ accuracy</p>
+                        <p class="experience-item">Deloitte → developed a fine-tuned LLM for legal document classification w/ 97% accuracy</p>
+                        <p class="experience-item">Lighter Capital → migrated 15+y/o p&l controller from .net framework to core v6, 3x usability upgrade</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right column: Links and Docs -->
+            <div class="right-column">
+                <div class="links-section">
+                    <h2 class="section-label">LINKS</h2>
+                    <a href="#" class="link link-email" id="email-link" data-email="joshbrice2025@u.northwestern.edu">joshbrice2025@u.northwestern.edu</a>
+                    <a href="https://github.com/jjb0123" target="_blank" rel="noopener noreferrer" class="link link-github">GitHub</a>
+                    <a href="https://linkedin.com/in/josh-brice" target="_blank" rel="noopener noreferrer" class="link link-linkedin">LinkedIn</a>
+                    <a href="https://medium.com/@joshbrice" target="_blank" rel="noopener noreferrer" class="link link-medium">Projects → Medium</a>
+                </div>
+
+                <div class="docs-section">
+                    <h2 class="section-label">DOCS</h2>
+                    <a href="Resume_Nov_2025.pdf" target="_blank" rel="noopener noreferrer" class="btn-cv">Resume</a>
+                    <a href="THESIS_PLAN (4).pdf" target="_blank" rel="noopener noreferrer" class="btn-cv">Thesis</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2024 Josh Brice</p>
+    </footer>
+    
+    <script>
+        document.getElementById('email-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            const email = this.getAttribute('data-email');
+            
+            navigator.clipboard.writeText(email).then(function() {
+                // Visual feedback - you can customize this
+                const originalText = e.target.textContent;
+                e.target.textContent = 'Copied!';
+                setTimeout(function() {
+                    e.target.textContent = originalText;
+                }, 1000);
+            }).catch(function(err) {
+                console.error('Failed to copy email:', err);
+            });
+        });
+    </script>
+</body>
+</html>
